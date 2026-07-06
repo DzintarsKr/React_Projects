@@ -1,0 +1,40 @@
+.postList {
+  width: 854px;
+  min-height: 725px;
+  background-color: #7898f4;
+  padding: 55px 92px 40px;
+}
+
+.postList h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.posts {
+  margin-top: 105px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.empty {
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.nextBtn {
+  width: 96px;
+  height: 35px;
+  margin-top: 28px;
+  margin-left: auto;
+  display: block;
+  border: none;
+  border-radius: 10px;
+  background-color: #4f6fd1;
+  color: #101b3d;
+  font-weight: 700;
+  cursor: pointer;
+}
