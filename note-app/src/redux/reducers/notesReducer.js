@@ -8,13 +8,15 @@ const notesReducer = (state = initialState, action) => {
     return { ...state, notes: [...state.notes, action.payload] };
   }
 
-  // if (action.type === "DELETE_NOTE") {
+  if (action.type === "DELETE_NOTE") {
+     return state.filter((note) => note.id !== action.payload);
+  }
 
-  // }
-
-  // if (action.type === "EDIT_NOTE") {
-
-  // }
+  if (action.type === "EDIT_NOTE") {
+     return state.map((note) =>
+        note.id === action.payload.id ? action.payload : note
+      );
+  }
 
   return state;
 };

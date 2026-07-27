@@ -23,6 +23,10 @@ function App() {
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    // Проверяем, чтобы поля не были пустыми перед отправкой
+    if (!title.trim() || !text.trim()) return;
+
     dispatch(
       addNoteAction({
         id: Math.random(),
@@ -30,6 +34,10 @@ function App() {
         text,
       }),
     );
+
+    // Очищаем поля ввода
+    setTitle("");
+    setText("");
   }
 
   return (
